@@ -17,4 +17,9 @@ module.exports = {
   },
   darkMode: "class",
   plugins: [nextui()],
+  variants: {
+    extend: {
+      textColor: ['child'],
+    },
+  },
 }
