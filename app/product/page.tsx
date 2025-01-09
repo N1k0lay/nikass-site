@@ -1,5 +1,5 @@
 "use client"
-import {Image, Button, Card, CardHeader, CardBody, CardFooter, Divider, Link} from "@nextui-org/react";
+import {Image, Button, Card, CardHeader, CardBody, CardFooter, Divider} from "@nextui-org/react";
 import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell} from "@nextui-org/react";
 
 import {title, subtitle} from "@/components/primitives";
@@ -182,10 +182,10 @@ export default function PricingPage() {
                 <h2 className={`${title({size: 'h2'})} text-center`}>Превосходство в каждой детали</h2>
                 <p className={'text-center'}>Каждая наша модель обладает уникальными характеристиками, которые делают её
                     идеальной для различных сценариев использования.</p>
-                <div className={'columns-3 gap-5'}>
+                <div className={'md:columns-3 gap-5'}>
                     {data4.map((item) => {
                         return <Card
-                            className={`w-full h-[${item.height}px] bg-zinc-100 dark:bg-zinc-100 mb-5`}
+                            className={`w-full max-h-[${item.height}px] bg-zinc-100 dark:bg-zinc-100 mb-5`}
                             radius="lg"
                             shadow="md"
                             isFooterBlurred
@@ -202,14 +202,10 @@ export default function PricingPage() {
                             <CardBody className="overflow-visible p-0">
                                 <Image
                                     alt="Card background"
-                                    // className="w-full h-full object-cover z-9"
-                                    // className="object-cover rounded-xl"
-                                    className="w-full object-cover h-full"
+                                    className="w-full object-cover h-full -z-1"
                                     src={item.image}
-                                    // removeWrapper
                                 />
                             </CardBody>
-
                             <CardFooter
                                 className="before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
                                 <p className="text-sm pr-1.5 text-dark dark:text-white drop-shadow-xl shadow-white">{item.description}</p>
