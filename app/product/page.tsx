@@ -49,7 +49,7 @@ export default function PricingPage() {
     return (<>
             {/*1. Hero*/}
             <section
-                className={'container m-auto max-w-[1280px] px-6 flex flex-col items-center md:my-0 relative justify-center gap-10 w-[100%]'}>
+                className={'relative container m-auto w-auto md:max-w-[1280px] px-6 flex flex-col items-center md:my-0 justify-center gap-10'}>
                 <div
                     className={' flex flex-col gap-5 items-center justify-center z-10 h-full py-20 md:py-20 text-white'}>
                     <h1 className={title({size: 'h1'})}>Энергия, Которая Всегда с Вами</h1>
@@ -59,7 +59,7 @@ export default function PricingPage() {
                     <Button variant={'shadow'} color={'warning'} size={'md'} radius="full">В каталог</Button>
                 </div>
                 <img src="/images/cl-68.jpg"
-                     className="absolute t-0 l-o b-0 r-0 z-0 inset-0 w-full h-full object-cover filter blur-2xl scale-105 saturate-150 opacity-60 translate-y-1 rounded-large"
+                     className="absolute t-0 l-0 b-0 r-0 z-0 inset-0 w-[95%] h-full object-cover filter blur-2xl scale-105 saturate-150 opacity-60  rounded-large"
                      aria-hidden="true"
                      alt={'blur'}/>
                 <img
@@ -214,7 +214,7 @@ export default function PricingPage() {
                 </div>
             </section>
             {/* 5. Энергия для любых условий */}
-            <section  className={sectionStyle}>
+            <section className={sectionStyle}>
                 <h2 className={`${title({size: 'h2'})} text-center`}>Энергия для любых условий</h2>
                 <div className={'md:columns-3 gap-5'}>
 
@@ -437,7 +437,6 @@ export default function PricingPage() {
                 </div>
             </section>
             <section className={'flex flex-col items-center py-20 md:py-20 gap-10 overflow-auto '}>
-
             </section>
 
         </>
