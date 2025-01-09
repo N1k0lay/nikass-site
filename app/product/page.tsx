@@ -5,10 +5,50 @@ import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell} from "@
 import {title, subtitle} from "@/components/primitives";
 import NextImage from 'next/image'
 
+const data4: ({ title: string, description: string, height: number, image: string }[]) = [
+    {
+        title: 'Портативный Дизайн',
+        description: 'Легкие и компактные, идеально подходят для использования как в помещении, так и на улице.',
+        height: 300,
+        image: '/images/human-charge.jpg'
+    },
+    {
+        title: 'Батарея LiFePO4',
+        description: 'Обеспечивает высокую безопасность и долговечность.',
+        height: 600,
+        image: '/images/energy-in.jpg'
+    },
+    {
+        title: 'Длительный срок службы',
+        description: 'Гарантия 2 года, срок службы более 2000 циклов.',
+        height: 400,
+        image: '/images/cl-68.jpg'
+    },
+    {
+        title: 'Многофункциональные интерфейсы',
+        description: 'DC, AC, USB порты для подключения различных устройств.',
+        height: 500,
+        image: '/images/cl-68.jpg'
+    },
+    {
+        title: 'Высокая емкость',
+        description: 'До 62000mAh для обеспечения энергией ваших мобильных устройств.',
+        height: 500,
+        image: '/images/cl-68.jpg'
+    },
+    {
+        title: '2 способа зарядки',
+        description: 'Солнечная панель и адаптер для сети',
+        height: 400,
+        image: '/images/cl-68.jpg'
+    }
+]
+
 export default function PricingPage() {
     return (<>
             {/*1. Hero*/}
-            <section className={'container m-auto max-w-[1280px] px-6 relative flex flex-col items-center justify-center gap-10  w-[100%]'}>
+            <section
+                className={'container m-auto max-w-[1280px] px-6 relative flex flex-col items-center justify-center gap-10  w-[100%]'}>
                 <div
                     className={' flex flex-col gap-5 items-center justify-center z-10 h-full py-20 md:py-20 text-white'}>
                     <h1 className={title({size: 'h1'})}>Энергия, Которая Всегда с Вами</h1>
@@ -29,7 +69,8 @@ export default function PricingPage() {
             </section>
 
             {/*2. Портативные энергетические системы*/}
-            <section className={'container m-auto max-w-[1280px] px-6 flex flex-col items-center py-20 md:py-20 gap-10'}>
+            <section
+                className={'container m-auto max-w-[1280px] px-6 flex flex-col items-center py-20 md:py-20 gap-10'}>
                 <h2 className={`${title({size: 'h2'})} text-center`}>Портативные энергетические системы</h2>
                 <p className={'text-center'}>
                     Мы предлагаем широкий ассортимент портативных энергетических систем, каждая из которых разработана
@@ -89,7 +130,8 @@ export default function PricingPage() {
                 </div>
             </section>
             {/*3. Энергия в числах*/}
-            <section className={'container m-auto max-w-[1280px] px-6 flex flex-row items-center py-20 md:py-20 gap-10'}>
+            <section
+                className={'container m-auto max-w-[1280px] px-6 flex flex-row items-center py-20 md:py-20 gap-10'}>
                 <div className={'basis-1/2 flex flex-col items-center gap-5'}>
                     <h2 className={title({size: 'h2'})}><span className={'text-amber-500'}>Энергия</span> в числах</h2>
                     <p className={'text-center'}>Каждая наша модель обладает уникальными характеристиками, которые
@@ -139,209 +181,51 @@ export default function PricingPage() {
                     </Table>
                 </div>
             </section>
-
-            <section className={'container m-auto max-w-[1280px] px-6 flex flex-col items-center py-20 md:py-20 gap-10'}>
+            {/* 4. Превосходство в каждой детали */}
+            <section
+                className={'container m-auto max-w-[1280px] px-6 flex flex-col items-center py-20 md:py-20 gap-10'}>
                 <h2 className={title({size: 'h2'})}>Превосходство в каждой детали</h2>
                 <p className={'text-center'}>Каждая наша модель обладает уникальными характеристиками, которые делают её
                     идеальной для различных сценариев использования.</p>
                 <div className={'columns-3 gap-5'}>
-                    <Card
-                        className="w-full h-[300px] bg-zinc-100 dark:bg-zinc-100 mb-5"
-                        radius="lg"
-                        shadow="md"
-                    >
-                        <CardHeader className="
-                        absolute z-10 pt-5
-                        backdrop-blur-sm
-                        bg-gradient-to-b from-40% from-[#ffffff9E] dark:from-[#0000009E] to-100%
-                        ">
-                            <div className="flex flex-col gap-2">
-                                <h4 className="text-3xl font-medium text-dark dark:text-white">
-                                    Портативный Дизайн
-                                </h4>
-                            </div>
-                        </CardHeader>
-                        <Image
-                            alt="Card background"
-                            className="w-full h-full object-cover z-9"
-                            src="/images/human-charge.jpg"
-                            removeWrapper
-                        />
-                        <CardFooter
-                            className="absolute pb-3 bottom-0 z-10
-                            backdrop-blur-sm  dark:backdrop-brightness-50
-                            bg-gradient-to-b from-0% dark:from-40% from-[#ffffff00] to-[#ffffff9E] dark:to-[#0000009E] to-100%
-                             ">
-                            <p className="text-sm pr-1.5 text-dark dark:text-white">
-                                Легкие и компактные, идеально подходят для использования как в помещении, так и на
-                                улице.
-                            </p>
-                        </CardFooter>
-                    </Card>
-                    <Card
-                        className="w-full h-[600px] bg-zinc-100 dark:bg-zinc-100 mb-5"
-                        radius="lg"
-                        shadow="md"
-                    >
-                        <CardHeader className="
-                        absolute z-10 pt-5
-                        backdrop-blur-sm
-                        bg-gradient-to-b from-40% from-[#ffffff9E] dark:from-[#0000009E] to-100%
-                        ">
-                            <div className="flex flex-col gap-2">
-                                <h4 className="text-3xl font-medium text-dark dark:text-white">
-                                    Батарея LiFePO4
-                                </h4>
-                            </div>
-                        </CardHeader>
-                        <Image
-                            alt="Card background"
-                            className="w-full h-full object-cover z-9"
-                            src="/images/energy-in.jpg"
-                            removeWrapper
-                        />
-                        <CardFooter
-                            className="absolute pb-3 bottom-0 z-10
-                            backdrop-blur-sm  dark:backdrop-brightness-50
-                            bg-gradient-to-b from-0% dark:from-40% from-[#ffffff00] to-[#ffffff9E] dark:to-[#0000009E] to-100%
-                             ">
-                            <p className="text-sm pr-1.5 text-dark dark:text-white">
-                                Обеспечивает высокую безопасность и долговечность.
-                            </p>
-                        </CardFooter>
-                    </Card>
-                    <Card
-                        className="w-full h-[400px] bg-zinc-100 dark:bg-zinc-100 mb-5"
-                        radius="lg"
-                        shadow="md"
-                    >
-                        <CardHeader className="
-                        absolute z-10 pt-5
-                        backdrop-blur-sm
-                        bg-gradient-to-b from-40% from-[#ffffff9E] dark:from-[#0000009E] to-100%
-                        ">
-                            <div className="flex flex-col gap-2">
-                                <h4 className="text-3xl font-medium text-dark dark:text-white">
-                                    Длительный срок службы
-                                </h4>
-                            </div>
-                        </CardHeader>
-                        <Image
-                            alt="Card background"
-                            className="w-full h-full object-cover z-9"
-                            src="/images/cl-68.jpg"
-                            removeWrapper
-                        />
-                        <CardFooter
-                            className="absolute pb-3 bottom-0 z-10
-                            backdrop-blur-sm  dark:backdrop-brightness-50
-                            bg-gradient-to-b from-0% dark:from-40% from-[#ffffff00] to-[#ffffff9E] dark:to-[#0000009E] to-100%
-                             ">
-                            <p className="text-sm pr-1.5 text-dark dark:text-white">
-                                Гарантия 2 года, срок службы более 2000 циклов.
-                            </p>
-                        </CardFooter>
-                    </Card>
-                    <Card
-                        className="w-full h-[500px] bg-zinc-100 dark:bg-zinc-100 mb-5"
-                        radius="lg"
-                        shadow="md"
-                    >
-                        <CardHeader className="
-                        absolute z-10 pt-5
-                        backdrop-blur-sm
-                        bg-gradient-to-b from-40% from-[#ffffff9E] dark:from-[#0000009E] to-100%
-                        ">
-                            <div className="flex flex-col gap-2">
-                                <h4 className="text-3xl font-medium text-dark dark:text-white">
-                                    Многофункциональные интерфейсы
-                                </h4>
+                    {data4.map((item) => {
+                        return <Card
+                            className={`w-full h-[${item.height}px] bg-zinc-100 dark:bg-zinc-100 mb-5`}
+                            radius="lg"
+                            shadow="md"
+                            isFooterBlurred
+                            key={item.title}
+                        >
+                            <CardHeader className="absolute z-10 pt-5
+                                                    backdrop-blur-sm
+                                                    bg-gradient-to-b from-40% from-[#ffffff9E] dark:from-[#0000009E] to-100%
+                                                    ">
+                                <div className="flex flex-col gap-2">
+                                    <h4 className="text-3xl font-medium text-dark dark:text-white">{item.title}</h4>
+                                </div>
+                            </CardHeader>
+                            <CardBody className="overflow-visible p-0">
+                                <Image
+                                    alt="Card background"
+                                    // className="w-full h-full object-cover z-9"
+                                    // className="object-cover rounded-xl"
+                                    className="w-full object-cover h-full"
+                                    src={item.image}
+                                    // removeWrapper
+                                />
+                            </CardBody>
 
-                            </div>
-                        </CardHeader>
-                        <Image
-                            alt="Card background"
-                            className="w-full h-full object-cover z-9"
-                            src="/images/cl-68.jpg"
-                            removeWrapper
-                        />
-                        <CardFooter
-                            className="absolute pb-3 bottom-0 z-10
-                            backdrop-blur-sm  dark:backdrop-brightness-50
-                            bg-gradient-to-b from-0% dark:from-40% from-[#ffffff00] to-[#ffffff9E] dark:to-[#0000009E] to-100%
-                             ">
-                            <p className="text-sm pr-1.5 text-dark dark:text-white">
-                                DC, AC, USB порты для подключения различных устройств.
-                            </p>
-                        </CardFooter>
-                    </Card>
-                    <Card
-                        className="w-full h-[500px] bg-zinc-100 dark:bg-zinc-100 mb-5"
-                        radius="lg"
-                        shadow="md"
-                    >
-                        <CardHeader className="
-                        absolute z-10 pt-5
-                        backdrop-blur-sm
-                        bg-gradient-to-b from-40% from-[#ffffff9E] dark:from-[#0000009E] to-100%
-                        ">
-                            <div className="flex flex-col gap-2">
-                                <h4 className="text-3xl font-medium text-dark dark:text-white">
-                                    Высокая емкость
-                                </h4>
-                            </div>
-                        </CardHeader>
-                        <Image
-                            alt="Card background"
-                            className="w-full h-full object-cover z-9"
-                            src="/images/cl-68.jpg"
-                            removeWrapper
-                        />
-                        <CardFooter
-                            className="absolute pb-3 bottom-0 z-10
-                            backdrop-blur-sm  dark:backdrop-brightness-50
-                            bg-gradient-to-b from-0% dark:from-40% from-[#ffffff00] to-[#ffffff9E] dark:to-[#0000009E] to-100%
-                             ">
-                            <p className="text-sm pr-1.5 text-dark dark:text-white">
-                                До 62000mAh для обеспечения энергией ваших мобильных устройств.
-                            </p>
-                        </CardFooter>
-                    </Card>
-                    <Card
-                        className="w-full h-[400px] bg-zinc-100 dark:bg-zinc-100 mb-5"
-                        radius="lg"
-                        shadow="md"
-                    >
-                        <CardHeader className="
-                        absolute z-10 pt-5
-                        backdrop-blur-sm
-                        bg-gradient-to-b from-40% from-[#ffffff9E] dark:from-[#0000009E] to-100%
-                        ">
-                            <div className="flex flex-col gap-2">
-                                <h4 className="text-3xl font-medium text-dark dark:text-white">
-                                    2 способа зарядки
-                                </h4>
-                            </div>
-                        </CardHeader>
-                        <Image
-                            alt="Card background"
-                            className="w-full h-full object-cover z-9"
-                            src="/images/cl-68.jpg"
-                            removeWrapper
-                        />
-                        <CardFooter
-                            className="absolute pb-3 bottom-0 z-10
-                            backdrop-blur-sm  dark:backdrop-brightness-50
-                            bg-gradient-to-b from-0% dark:from-40% from-[#ffffff00] to-[#ffffff9E] dark:to-[#0000009E] to-100%
-                             ">
-                            <p className="text-sm pr-1.5 text-dark dark:text-white">
-                                Солнечная панель и адаптер для сети
-                            </p>
-                        </CardFooter>
-                    </Card>
+                            <CardFooter
+                                className="before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+                                <p className="text-sm pr-1.5 text-dark dark:text-white drop-shadow-xl shadow-white">{item.description}</p>
+                            </CardFooter>
+                        </Card>
+                    })}
                 </div>
             </section>
-            <section className={'container m-auto max-w-[1280px] px-6 flex flex-col items-center py-20 md:py-20 gap-10'}>
+            {/* 5. Энергия для любых условий */}
+            <section
+                className={'container m-auto max-w-[1280px] px-6 flex flex-col items-center py-20 md:py-20 gap-10'}>
                 <h2 className={title({size: 'h2'})}>Энергия для любых условий</h2>
                 <div className={'columns-3 gap-5'}>
 
@@ -443,7 +327,7 @@ export default function PricingPage() {
                     </Card>
                 </div>
             </section>
-
+            {/* 6. Отзывы */}
             <section className={'flex flex-col items-center py-20 md:py-20 gap-10 overflow-auto '}>
                 <h2 className={title({size: 'h2'})}>Что говорят наши клиенты</h2>
                 <div className={'snap-x flex flex-row overflow-x-auto w-full relative'}>
@@ -563,7 +447,9 @@ export default function PricingPage() {
                     </Card>
                 </div>
             </section>
+            <section className={'flex flex-col items-center py-20 md:py-20 gap-10 overflow-auto '}>
 
+            </section>
 
         </>
     );
