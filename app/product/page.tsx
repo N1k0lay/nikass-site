@@ -177,8 +177,7 @@ export default function PricingPage() {
                 </div>
             </section>
             {/* 4. Превосходство в каждой детали */}
-            <section
-                className={sectionStyle}>
+            <section className={sectionStyle}>
                 <h2 className={`${title({size: 'h2'})} text-center`}>Превосходство в каждой детали</h2>
                 <p className={'text-center'}>Каждая наша модель обладает уникальными характеристиками, которые делают её
                     идеальной для различных сценариев использования.</p>
@@ -215,10 +214,9 @@ export default function PricingPage() {
                 </div>
             </section>
             {/* 5. Энергия для любых условий */}
-            <section
-                className={sectionStyle}>
-                <h2 className={title({size: 'h2'})}>Энергия для любых условий</h2>
-                <div className={'columns-3 gap-5'}>
+            <section  className={sectionStyle}>
+                <h2 className={`${title({size: 'h2'})} text-center`}>Энергия для любых условий</h2>
+                <div className={'md:columns-3 gap-5'}>
 
                     <Card
                         className="w-full h-[300px] bg-zinc-100 dark:bg-zinc-100 mb-5"
