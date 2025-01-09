@@ -436,9 +436,6 @@ export default function PricingPage() {
                     </Card>
                 </div>
             </section>
-            <section className={'flex flex-col items-center py-20 md:py-20 gap-10 overflow-auto '}>
-            </section>
-
         </>
     );
 }
