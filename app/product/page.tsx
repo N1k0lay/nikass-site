@@ -43,12 +43,13 @@ const data4: ({ title: string, description: string, height: number, image: strin
         image: '/images/cl-68.jpg'
     }
 ]
+const sectionStyle = 'container m-auto max-w-[1280px] flex flex-col items-center px-6 py-10 md:py-15 gap-10'
 
 export default function PricingPage() {
     return (<>
             {/*1. Hero*/}
             <section
-                className={'container m-auto max-w-[1280px] px-6 relative flex flex-col items-center justify-center gap-10  w-[100%]'}>
+                className={'container m-auto max-w-[1280px] px-6 flex flex-col items-center md:my-0 relative justify-center gap-10 w-[100%]'}>
                 <div
                     className={' flex flex-col gap-5 items-center justify-center z-10 h-full py-20 md:py-20 text-white'}>
                     <h1 className={title({size: 'h1'})}>Энергия, Которая Всегда с Вами</h1>
@@ -58,11 +59,11 @@ export default function PricingPage() {
                     <Button variant={'shadow'} color={'warning'} size={'md'} radius="full">В каталог</Button>
                 </div>
                 <img src="/images/cl-68.jpg"
-                     className="absolute t-0 l-o b-0 r-0 z-0 inset-0 w-full h-full object-cover filter blur-lg scale-105 saturate-150 opacity-30 translate-y-1 rounded-large"
+                     className="absolute t-0 l-o b-0 r-0 z-0 inset-0 w-full h-full object-cover filter blur-2xl scale-105 saturate-150 opacity-60 translate-y-1 rounded-large"
                      aria-hidden="true"
                      alt={'blur'}/>
                 <img
-                    className={'absolute t-0 l-o b-0 r-0 z-9 z-9 object-cover rounded-large h-[100%] w-[100%] dark:brightness-[0.7] brightness-[0.7] '}
+                    className={'absolute t-0 l-o b-0 r-0 z-9 z-9 object-cover rounded-large h-[100%] w-[95%]  dark:brightness-[0.7] brightness-[0.7] '}
                     src={'/images/cl-68.jpg'}
                     alt={'hero'}/>
 
@@ -70,7 +71,7 @@ export default function PricingPage() {
 
             {/*2. Портативные энергетические системы*/}
             <section
-                className={'container m-auto max-w-[1280px] px-6 flex flex-col items-center py-20 md:py-20 gap-10'}>
+                className={sectionStyle}>
                 <h2 className={`${title({size: 'h2'})} text-center`}>Портативные энергетические системы</h2>
                 <p className={'text-center'}>
                     Мы предлагаем широкий ассортимент портативных энергетических систем, каждая из которых разработана
@@ -131,7 +132,7 @@ export default function PricingPage() {
             </section>
             {/*3. Энергия в числах*/}
             <section
-                className={'container m-auto max-w-[1280px] px-6 flex flex-row items-center py-20 md:py-20 gap-10'}>
+                className={sectionStyle}>
                 <div className={'basis-1/2 flex flex-col items-center gap-5'}>
                     <h2 className={title({size: 'h2'})}><span className={'text-amber-500'}>Энергия</span> в числах</h2>
                     <p className={'text-center'}>Каждая наша модель обладает уникальными характеристиками, которые
@@ -183,7 +184,7 @@ export default function PricingPage() {
             </section>
             {/* 4. Превосходство в каждой детали */}
             <section
-                className={'container m-auto max-w-[1280px] px-6 flex flex-col items-center py-20 md:py-20 gap-10'}>
+                className={sectionStyle}>
                 <h2 className={title({size: 'h2'})}>Превосходство в каждой детали</h2>
                 <p className={'text-center'}>Каждая наша модель обладает уникальными характеристиками, которые делают её
                     идеальной для различных сценариев использования.</p>
@@ -225,7 +226,7 @@ export default function PricingPage() {
             </section>
             {/* 5. Энергия для любых условий */}
             <section
-                className={'container m-auto max-w-[1280px] px-6 flex flex-col items-center py-20 md:py-20 gap-10'}>
+                className={sectionStyle}>
                 <h2 className={title({size: 'h2'})}>Энергия для любых условий</h2>
                 <div className={'columns-3 gap-5'}>
 
