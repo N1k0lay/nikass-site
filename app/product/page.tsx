@@ -68,78 +68,72 @@ export default function PricingPage() {
                     alt={'hero'}/>
 
             </section>
-
             {/*2. Портативные энергетические системы*/}
-            <section
-                className={sectionStyle}>
+            <section className={sectionStyle}>
                 <h2 className={`${title({size: 'h2'})} text-center`}>Портативные энергетические системы</h2>
                 <p className={'text-center'}>
                     Мы предлагаем широкий ассортимент портативных энергетических систем, каждая из которых разработана
                     для удовлетворения различных потребностей. Найдите идеальную модель для вашего образа жизни.
                 </p>
                 <div className={'flex flex-row gap-10'}>
-
-                    <div>
-                        <div className="w-full grid grid-cols-3 gap-4">
-                            {Array(3).fill(0).map((item, i) =>
-                                <Card
-                                    className="h-[300px] bg-background"
-                                    isFooterBlurred
-                                    radius="lg"
-                                    shadow="md"
-                                    key={i}
-                                >
-                                    <CardHeader
-                                        className="absolute z-10 top-0 flex-col items-start bg-gradient-to-b from-40% from-[#0000009E] to-100% pb-10">
-                                        <p className="text-xs dark:text-white/60 uppercase font-bold">
-                                            Новинка
+                    <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
+                        {Array(3).fill(0).map((item, i) =>
+                            <Card
+                                className="h-[300px] bg-background"
+                                isFooterBlurred
+                                radius="lg"
+                                shadow="md"
+                                key={i}
+                            >
+                                <CardHeader
+                                    className="absolute z-10 top-0 flex-col items-start bg-gradient-to-b from-40% from-[#0000009E] to-100% pb-10">
+                                    <p className="text-xs dark:text-white/60 uppercase font-bold">
+                                        Новинка
+                                    </p>
+                                    <h4 className="font-medium text-2xl">
+                                        SL-66
+                                    </h4>
+                                </CardHeader>
+                                <NextImage
+                                    alt="Card example background"
+                                    className="w-full h-full scale-125 -translate-y-10 object-cover z-1"
+                                    src="/images/cl-68.jpg"
+                                    width={300}
+                                    height={400}
+                                />
+                                <CardFooter
+                                    className="absolute bg-white/30 bottom-0 border-t border-slate-300 z-10 justify-between">
+                                    <div>
+                                        <p className="text-black text-xs">
+                                            1000W/1024Wh
                                         </p>
-                                        <h4 className="font-medium text-2xl">
-                                            SL-66
-                                        </h4>
-                                    </CardHeader>
-                                    <NextImage
-                                        alt="Card example background"
-                                        className="w-full h-full scale-125 -translate-y-10 object-cover z-1"
-                                        src="/images/cl-68.jpg"
-                                        width={300}
-                                        height={400}
-                                    />
-                                    <CardFooter
-                                        className="absolute bg-white/30 bottom-0 border-t border-slate-300 z-10 justify-between">
-                                        <div>
-                                            <p className="text-black text-xs">
-                                                1000W/1024Wh
-                                            </p>
-                                            <p className="text-black text-xs">
-                                                Solar Energy Storage System
-                                            </p>
-                                        </div>
-                                        <Button
-                                            color='warning'
-                                            radius="full"
-                                            size='md'
-                                            variant='faded'
-                                        >
-                                            Купить
-                                        </Button>
-                                    </CardFooter>
-                                </Card>
-                            )}
-                        </div>
+                                        <p className="text-black text-xs">
+                                            Solar Energy Storage System
+                                        </p>
+                                    </div>
+                                    <Button
+                                        color='warning'
+                                        radius="full"
+                                        size='md'
+                                        variant='faded'
+                                    >
+                                        Купить
+                                    </Button>
+                                </CardFooter>
+                            </Card>
+                        )}
                     </div>
                 </div>
             </section>
             {/*3. Энергия в числах*/}
-            <section
-                className={sectionStyle}>
-                <div className={'basis-1/2 flex flex-col items-center gap-5'}>
+            <section className={`${sectionStyle} grid md:grid-cols-2`}>
+                <div className={' flex flex-col items-center gap-5'}>
                     <h2 className={title({size: 'h2'})}><span className={'text-amber-500'}>Энергия</span> в числах</h2>
                     <p className={'text-center'}>Каждая наша модель обладает уникальными характеристиками, которые
                         делают её
                         идеальной для различных сценариев использования.</p>
                 </div>
-                <div className={'basis-1/2'}>
+                <div className={''}>
                     <Table aria-label="Example static collection table">
                         <TableHeader>
                             <TableColumn children={<></>}/>
@@ -185,7 +179,7 @@ export default function PricingPage() {
             {/* 4. Превосходство в каждой детали */}
             <section
                 className={sectionStyle}>
-                <h2 className={title({size: 'h2'})}>Превосходство в каждой детали</h2>
+                <h2 className={`${title({size: 'h2'})} text-center`}>Превосходство в каждой детали</h2>
                 <p className={'text-center'}>Каждая наша модель обладает уникальными характеристиками, которые делают её
                     идеальной для различных сценариев использования.</p>
                 <div className={'columns-3 gap-5'}>
