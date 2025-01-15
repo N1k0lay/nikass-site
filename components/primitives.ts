@@ -68,3 +68,6 @@ export const subtitle = tv({
     color: 'blue'
   },
 });
+
+
+export const sectionStyle = 'container m-auto max-w-[1280px] flex flex-col items-center px-6 py-10 md:py-15 gap-10'

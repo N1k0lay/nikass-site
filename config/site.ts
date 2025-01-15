@@ -5,14 +5,22 @@ export const siteConfig = {
   description: "Портативные энергетические системы нового поколения",
   navItems: [
     {
-      label: "Главная",
-      href: "/",
+      label: "Каталог",
+      href: "products",
+    },
+    {
+      label: "Портативки",
+      href: "portable-energy-storage-system",
     },
   ],
   navMenuItems: [
     {
-      label: "Скоро появится меню...",
-      href: "/",
+      label: "Каталог",
+      href: "/products",
+    },
+    {
+      label: "Портативки",
+      href: "/portable-energy-storage-system",
     },
   ],
   links: {
