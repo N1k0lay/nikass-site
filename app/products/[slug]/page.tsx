@@ -4,7 +4,7 @@ import {subtitle, title} from "@/components/primitives";
 import Link from 'next/link';
 import Description from "@/app/products/[slug]/Description";
 
-export default async function ProductPage({params}: { params: { slug: string } }) {
+export default async function ProductPage({params}: { params: Promise<{ slug: string }> }) {
     const slug = (await params).slug;
     const productData = productsData.data.find(
         (item) => item.name.toLowerCase() === slug.toLowerCase()
