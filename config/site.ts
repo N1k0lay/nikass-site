@@ -6,11 +6,11 @@ export const siteConfig = {
   navItems: [
     {
       label: "Каталог",
-      href: "products",
+      href: "/products",
     },
     {
       label: "Портативки",
-      href: "portable-energy-storage-system",
+      href: "/portable-energy-storage-system",
     },
   ],
   navMenuItems: [

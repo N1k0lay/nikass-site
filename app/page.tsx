@@ -1,5 +1,5 @@
 "use client"
-import { Button, Card, CardHeader, CardFooter} from "@nextui-org/react";
+import { Button, Card, CardHeader, CardFooter} from "@heroui/react";
 
 import {title, subtitle, sectionStyle} from "@/components/primitives";
 import NextImage from 'next/image'
@@ -55,14 +55,14 @@ export default function PricingPage() {
                     </span>
                     <Button variant={'shadow'} color={'warning'} size={'md'} radius="full">В каталог</Button>
                 </div>
-                <img src="/images/sl-69.png"
+                <img src="/products/SL-68/sl-68.jpg"
                      className="absolute t-0 l-0 b-0 r-0 z-0 inset-0 w-[95%] h-full object-cover filter blur-2xl scale-105 saturate-150 opacity-60  rounded-large"
                      aria-hidden="true"
                      alt={'blur'}/>
-                <img
-                    className={'absolute t-0 l-o b-0 r-0 z-9 z-9 object-cover rounded-large h-[100%] w-[95%]  dark:brightness-[0.7] brightness-[0.7] '}
-                    src={'/images/sl-68.jpg'}
-                    alt={'hero'}/>
+                {/*<img*/}
+                {/*    className={'absolute t-0 l-o b-0 r-0 z-9 z-9 object-cover rounded-large h-[100%] w-[95%]  dark:brightness-[0.7] brightness-[0.7] '}*/}
+                {/*    src={'/products/SL-68/sl-68.jpg'}*/}
+                {/*    alt={'hero'}/>*/}
 
             </section>
             {/*2. Каталог*/}

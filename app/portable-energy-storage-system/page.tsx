@@ -1,6 +1,6 @@
 "use client"
-import {Image, Button, Card, CardHeader, CardBody, CardFooter, Divider} from "@nextui-org/react";
-import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell} from "@nextui-org/react";
+import {Image, Button, Card, CardHeader, CardBody, CardFooter, Divider} from "@heroui/react";
+import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell} from "@heroui/react";
 
 import {title, subtitle, sectionStyle} from "@/components/primitives";
 import NextImage from 'next/image'
