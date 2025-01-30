@@ -8,19 +8,11 @@ export const siteConfig = {
       label: "Каталог",
       href: "/products",
     },
-    {
-      label: "Портативки",
-      href: "/portable-energy-storage-system",
-    },
   ],
   navMenuItems: [
     {
       label: "Каталог",
       href: "/products",
-    },
-    {
-      label: "Портативки",
-      href: "/portable-energy-storage-system",
     },
   ],
   links: {

@@ -30,7 +30,9 @@ export default async function ProductPage({params}: { params: Promise<{ slug: st
                     </CardFooter>
                 </Card>
             </div>
-            {productData && <Description productData={productData}/>}
+            <section>
+                {productData && <Description productData={productData}/>}
+            </section>
 
         </>
     );

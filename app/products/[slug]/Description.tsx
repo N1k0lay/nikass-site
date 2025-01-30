@@ -1,18 +1,19 @@
 'use client'
 
-import {Tab, Tabs} from "@heroui/react";
+import {Card, Tab, Tabs} from "@heroui/react";
 import Markdown from "react-markdown";
 import {title} from "@/components/primitives";
 import {useState} from "react";
 import ProductType from "@/types/productType";
+import Characteristics from "@/components/Characteristics/Characteristics";
 
 export default function Description ({productData}: {productData: ProductType}) {
 
     const [selected, setSelected] = useState<string | number>('Описание');
 
-    return <Tabs  aria-label="Tabs variants" variant={'bordered'}  selectedKey={selected} onSelectionChange={setSelected}>
+    return <Tabs className={'flex justify-center'} aria-label="Tabs variants" variant={'bordered'} selectedKey={selected} onSelectionChange={setSelected}>
         <Tab key={'Описание'} title="Описание">
-            <section>
+            <Card className={'p-4 px-7'}>
                 <Markdown components={{
                     h1(props) {
                         const {node, ...rest} = props;
@@ -27,11 +28,10 @@ export default function Description ({productData}: {productData: ProductType}) 
                         return <h3 className={`text-2xl lg:text-2xl py-5`} {...rest} />
                     }
                 }}>{productData?.description}</Markdown>
-
-            </section>
+            </Card>
         </Tab>
         <Tab key={'Характеристики'} title={'Характеристики'}>
-        {/*    //TODO: Вывод характеристик*/}
+        <Characteristics data={productData} />
         </Tab>
     </Tabs>
 }

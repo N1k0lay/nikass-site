@@ -92,7 +92,7 @@ export default function PricingPage() {
                                 <NextImage
                                     alt="Card example background"
                                     className="w-full h-full scale-125 -translate-y-10 object-cover z-1"
-                                    src="/images/cl-68.jpg"
+                                    src={'/products/SL-68/sl-68.jpg'}
                                     width={300}
                                     height={400}
                                 />
