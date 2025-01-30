@@ -1,0 +1,5 @@
+PassengerFriendlyErrorPages on
+PassengerNodejs /home/n/n1k0lay/.local/bin/node
+PassengerAppRoot /home/n/n1k0lay/dev.n1k0lay.ru
+PassengerAppType node
+PassengerStartupFile app.js
