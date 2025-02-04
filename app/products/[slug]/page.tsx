@@ -30,8 +30,8 @@ export default async function ProductPage({params}: { params: Promise<{ slug: st
                     </CardBody>
                     <CardFooter>
                         <div className={'flex gap-4'}>
-                            <Link href={'/'}><Button>OZON</Button></Link>
-                            <Link href={'/'}><Button>WildBerries</Button></Link>
+                            <Button as={Link} href={'/'}>OZON</Button>
+                            <Button as={Link} href={'/'}>WildBerries</Button>
                         </div>
                     </CardFooter>
                 </Card>

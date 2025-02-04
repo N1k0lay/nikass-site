@@ -54,39 +54,39 @@ const Characteristics = ({productData}: { productData: ProductType }) => {
 
             </TableBody>
         </Table>
-        <div className={'flex flex-row gap-5'}>
-        <Table hideHeader aria-label="Комлпектация">
-            <TableHeader>
-                <TableColumn> </TableColumn>
-                <TableColumn> </TableColumn>
-                <TableColumn> </TableColumn>
-            </TableHeader>
-            <TableBody>
-                {productData.includes.map(item => {
-                   return <TableRow key={`includes-${item.item}`}>
-                        <TableCell>{item.item}</TableCell>
-                        <TableCell>{item.spec}</TableCell>
-                        <TableCell>{item.quantity}</TableCell>
+        <div className={'flex flex-col md:flex-row gap-5'}>
+            <Table hideHeader aria-label="Комлпектация">
+                <TableHeader>
+                    <TableColumn> </TableColumn>
+                    <TableColumn> </TableColumn>
+                    <TableColumn> </TableColumn>
+                </TableHeader>
+                <TableBody>
+                    {productData.includes.map(item => {
+                        return <TableRow key={`includes-${item.item}`}>
+                            <TableCell>{item.item}</TableCell>
+                            <TableCell>{item.spec}</TableCell>
+                            <TableCell>{item.quantity}</TableCell>
+                        </TableRow>
+                    })}
+                </TableBody>
+            </Table>
+            <Table hideHeader aria-label="Габарите">
+                <TableHeader>
+                    <TableColumn> </TableColumn>
+                    <TableColumn> </TableColumn>
+                </TableHeader>
+                <TableBody>
+                    <TableRow key={'packaging-unitWeight'}>
+                        <TableCell>{'Вес'}</TableCell>
+                        <TableCell>{productData.packaging.outerBoxWeight}</TableCell>
                     </TableRow>
-                })}
-            </TableBody>
-        </Table>
-        <Table hideHeader aria-label="Габарите">
-            <TableHeader>
-                <TableColumn> </TableColumn>
-                <TableColumn> </TableColumn>
-            </TableHeader>
-            <TableBody>
-                <TableRow key={'packaging-unitWeight'}>
-                    <TableCell>{'Вес'}</TableCell>
-                    <TableCell>{productData.packaging.outerBoxWeight}</TableCell>
-                </TableRow>
-                <TableRow key={'warranty'}>
-                    <TableCell>{'Гарантия'}</TableCell>
-                    <TableCell>{productData.warranty}</TableCell>
-                </TableRow>
-            </TableBody>
-        </Table>
+                    <TableRow key={'warranty'}>
+                        <TableCell>{'Гарантия'}</TableCell>
+                        <TableCell>{productData.warranty}</TableCell>
+                    </TableRow>
+                </TableBody>
+            </Table>
         </div>
 
     </section>

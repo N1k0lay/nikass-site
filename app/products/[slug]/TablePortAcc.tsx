@@ -35,9 +35,8 @@ export default function TablePortAcc() {
                         <TableCell>{product.battery.energy}</TableCell>
                         <TableCell>{product.price}</TableCell>
                         <TableCell>
-                            <Link className={'text-right'} href={`/products/${product.model.toLowerCase()}`}>
-                                <Button color={'default'}>Перейти</Button>
-                            </Link>
+                            <Button as={Link} className={'text-right'} href={`/products/${product.model.toLowerCase()}`}
+                                    color={'default'}>Перейти</Button>
                         </TableCell>
                     </TableRow>
                 })

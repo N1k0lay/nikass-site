@@ -59,7 +59,7 @@ export default function PricingPage() {
                     <span className={`${subtitle()} text-center text-white`}>
                         Портативные системы NIKASS <br/> Ваш надежный источник энергии в любой ситуации
                     </span>
-                    <Link href={'/products'}><Button variant={'shadow'} color={'warning'} size={'md'} radius="full">В каталог</Button></Link>
+                    <Button as={Link} href={'/products'} variant={'shadow'} color={'warning'} size={'md'} radius="full">В каталог</Button>
                 </div>
                 <img src="/images/sl-69.png"
                      className="absolute t-0 l-0 b-0 r-0 z-0 inset-0 w-[95%] h-full object-cover filter blur-2xl scale-105 saturate-150 opacity-60  rounded-large"

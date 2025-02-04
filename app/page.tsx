@@ -16,7 +16,9 @@ export default function PricingPage() {
                     <span className={` text-center light:text-white`}>
                         Портативные системы NIKASS <br/> Ваш надежный источник энергии в любой ситуации
                     </span>
-                    <Button variant={'shadow'} color={'warning'} size={'md'} radius="full">В каталог</Button>
+                    <Button as={Link} href={'/products'} variant={'shadow'} color={'warning'} size={'md'} radius="full">
+                        В каталог
+                    </Button>
                 </div>
                 <img src="/products/SL-68/sl-68.jpg"
                      className="absolute t-0 l-0 b-0 r-0 z-0 inset-0 w-[95%] h-full object-cover filter blur-2xl scale-105 saturate-150 opacity-60  rounded-large"
@@ -69,17 +71,17 @@ export default function PricingPage() {
                                         Мощность доступная в полном объёме
                                     </p>
                                 </div>
-                                <Link href={'/products'}>
-                                    <Button
-                                        color='default'
-                                        radius="full"
-                                        size='md'
-                                        variant='faded'
-                                        className={'px-3'}
-                                    >
-                                        Подробнее
-                                    </Button>
-                                </Link>
+                                <Button
+                                    color='default'
+                                    radius="full"
+                                    size='md'
+                                    variant='faded'
+                                    className={'px-3'}
+                                    as={Link}
+                                    href={'/products'}
+                                >
+                                    Подробнее
+                                </Button>
                             </CardFooter>
                         </Card>
                         <Card
@@ -114,16 +116,16 @@ export default function PricingPage() {
                                         Защитный слой PPF. Батареи А класса.
                                     </p>
                                 </div>
-                                <Link href={'/products'}>
-                                    <Button
-                                        color='default'
-                                        radius="full"
-                                        size='md'
-                                        variant='faded'
-                                    >
-                                        Подробнее
-                                    </Button>
-                                </Link>
+                                <Button
+                                    color='default'
+                                    radius="full"
+                                    size='md'
+                                    variant='faded'
+                                    as={Link}
+                                    href={'/products'}
+                                >
+                                    Подробнее
+                                </Button>
                             </CardFooter>
                         </Card>
                         <Card
@@ -158,16 +160,16 @@ export default function PricingPage() {
                                         Мощность доступная в полном объёме
                                     </p>
                                 </div>
-                                <Link href={'/products'}>
-                                    <Button
-                                        color='default'
-                                        radius="full"
-                                        size='md'
-                                        variant='faded'
-                                    >
-                                        Подробнее
-                                    </Button>
-                                </Link>
+                                <Button
+                                    color='default'
+                                    radius="full"
+                                    size='md'
+                                    variant='faded'
+                                    as={Link}
+                                    href={'/products'}
+                                >
+                                    Подробнее
+                                </Button>
                             </CardFooter>
                         </Card>
 
