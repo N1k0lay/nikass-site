@@ -1,38 +1,58 @@
-export interface productType {
+export interface ProductType {
     name: string
-    image: string
-    category: string
-    price: number
     description: string
     shortDescription: string
-    params: Params
+    category: string
+    image: string
+    model: string
+    price: number
+    battery: Battery
+    inverter?: Inverter
+    outputs: Outputs
+    discharge: Discharge
+    charging: Charging
+    packaging: Packaging
+    includes: Include[]
+    warranty: string
 }
 
-export interface Params {
-    specification: Specification[]
-    packingAndWeight: PackingAndWeight[]
-    packingList: PackingList[]
-    features: Feature[]
+export interface Battery {
+    capacity: string    //Емкость
+    energy: string
+    type: string
 }
 
-export interface Specification {
-    label: string
-    value: string
+export interface Inverter {
+    power: string
+    outputVoltage: string
+    frequency: string
 }
 
-export interface PackingAndWeight {
-    label: string
-    value: string
+export interface Outputs {
+    DC: string
+    USB: string
 }
 
-export interface PackingList {
-    label: string
-    value: string
+export interface Discharge {
+    load: string
+    time: string
 }
 
-export interface Feature {
-    label: string
-    value: string
+export interface Charging {
+    solarInput: string
+    ACInput: string
+    current: string
 }
 
-export default productType
+export interface Packaging {
+    giftBoxSize: string
+    unitWeight: string
+    outerBoxSize: string
+    outerBoxWeight: string
+}
+
+export interface Include {
+    item: string
+    spec: string
+    quantity: number
+}

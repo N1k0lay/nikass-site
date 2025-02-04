@@ -1,9 +1,13 @@
 "use client"
-import {Image, Button, Card, CardHeader, CardBody, CardFooter, Divider} from "@heroui/react";
-import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell} from "@heroui/react";
+import {Image} from "@heroui/image";
+import {Button} from "@heroui/button";
+import {Divider} from "@heroui/divider";
+import {Card, CardHeader, CardBody, CardFooter} from "@heroui/card";
+import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell} from "@heroui/table";
 
 import {title, subtitle, sectionStyle} from "@/components/primitives";
 import NextImage from 'next/image'
+import Link from "next/link";
 
 const data4: ({ title: string, description: string, height: number, image: string }[]) = [
     {
@@ -47,23 +51,24 @@ const data4: ({ title: string, description: string, height: number, image: strin
 export default function PricingPage() {
     return (<>
             {/*1. Hero*/}
-            <section className={'relative container m-auto w-auto md:max-w-[1280px] px-6 flex flex-col items-center md:my-0 justify-center gap-10'}>
+            <section
+                className={'relative container m-auto w-auto md:max-w-[1280px] px-6 flex flex-col items-center md:my-0 justify-center gap-10'}>
                 <div
                     className={' flex flex-col gap-5 items-center justify-center z-10 h-full py-20 md:py-20 text-white'}>
                     <h1 className={`${title({size: 'h1'})} text-center`}>Энергия, Которая Всегда с Вами</h1>
                     <span className={`${subtitle()} text-center text-white`}>
                         Портативные системы NIKASS <br/> Ваш надежный источник энергии в любой ситуации
                     </span>
-                    <Button variant={'shadow'} color={'warning'} size={'md'} radius="full">В каталог</Button>
+                    <Link href={'/products'}><Button variant={'shadow'} color={'warning'} size={'md'} radius="full">В каталог</Button></Link>
                 </div>
                 <img src="/images/sl-69.png"
                      className="absolute t-0 l-0 b-0 r-0 z-0 inset-0 w-[95%] h-full object-cover filter blur-2xl scale-105 saturate-150 opacity-60  rounded-large"
                      aria-hidden="true"
                      alt={'blur'}/>
-                <img
-                    className={'absolute t-0 l-o b-0 r-0 z-9 z-9 object-cover rounded-large h-[100%] w-[95%]  dark:brightness-[0.7] brightness-[0.7] '}
-                    src={'/images/sl-68.jpg'}
-                    alt={'hero'}/>
+                {/*<img*/}
+                {/*    className={'absolute t-0 l-o b-0 r-0 z-9 object-cover rounded-large h-[100%] w-[95%]  dark:brightness-[0.7] brightness-[0.7] '}*/}
+                {/*    src={'/images/sl-68.jpg'}*/}
+                {/*    alt={'hero'}/>*/}
 
             </section>
             {/*2. Портативные энергетические системы*/}
@@ -75,48 +80,48 @@ export default function PricingPage() {
                 </p>
                 <div className={'flex flex-row gap-10'}>
                     <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <Card
-                                className="h-[300px] bg-background"
-                                isFooterBlurred
-                                radius="lg"
-                                shadow="md"
-                            >
-                                <CardHeader
-                                    className="absolute z-10 top-0 flex-col items-start bg-gradient-to-b from-40% from-[#0000009E] to-100% pb-10">
-                                    <p className="text-xs dark:text-white/60 uppercase font-bold">
-                                        800-1000Вт
+                        <Card
+                            className="h-[300px] bg-background"
+                            isFooterBlurred
+                            radius="lg"
+                            shadow="md"
+                        >
+                            <CardHeader
+                                className="absolute z-10 top-0 flex-col items-start bg-gradient-to-b from-40% from-[#0000009E] to-100% pb-10">
+                                <p className="text-xs dark:text-white/60 uppercase font-bold">
+                                    800-1000Вт
+                                </p>
+                                <h4 className="font-medium text-2xl">
+                                    Портативные аккумуляторные электростанции
+                                </h4>
+                            </CardHeader>
+                            <NextImage
+                                alt="Card example background"
+                                className="w-full h-full scale-125 -translate-y-10 object-cover z-1"
+                                src="/images/sl-69.png"
+                                width={300}
+                                height={400}
+                            />
+                            <CardFooter
+                                className="absolute bg-white/30 bottom-0 border-t border-slate-300 z-10 justify-between">
+                                <div>
+                                    <p className="text-black text-xs">
+                                        Портативность и многофункциональность
                                     </p>
-                                    <h4 className="font-medium text-2xl">
-                                        Портативные аккумуляторные электростанции
-                                    </h4>
-                                </CardHeader>
-                                <NextImage
-                                    alt="Card example background"
-                                    className="w-full h-full scale-125 -translate-y-10 object-cover z-1"
-                                    src="/images/cl-68.jpg"
-                                    width={300}
-                                    height={400}
-                                />
-                                <CardFooter
-                                    className="absolute bg-white/30 bottom-0 border-t border-slate-300 z-10 justify-between">
-                                    <div>
-                                        <p className="text-black text-xs">
-                                            Портативность и многофункциональность
-                                        </p>
-                                        <p className="text-black text-xs">
-                                            Мощность доступная в полном объёме
-                                        </p>
-                                    </div>
-                                    <Button
-                                        color='default'
-                                        radius="full"
-                                        size='md'
-                                        variant='faded'
-                                    >
-                                        Подробнее
-                                    </Button>
-                                </CardFooter>
-                            </Card>
+                                    <p className="text-black text-xs">
+                                        Мощность доступная в полном объёме
+                                    </p>
+                                </div>
+                                <Button
+                                    color='default'
+                                    radius="full"
+                                    size='md'
+                                    variant='faded'
+                                >
+                                    Подробнее
+                                </Button>
+                            </CardFooter>
+                        </Card>
                         <Card
                             className="h-[300px] bg-background"
                             isFooterBlurred
