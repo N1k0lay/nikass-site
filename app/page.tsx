@@ -20,14 +20,24 @@ export default function PricingPage() {
                         В каталог
                     </Button>
                 </div>
-                <img src="/products/SL-68/sl-68.jpg"
-                     className="absolute t-0 l-0 b-0 r-0 z-0 inset-0 w-[95%] h-full object-cover filter blur-2xl scale-105 saturate-150 opacity-60  rounded-large"
-                     aria-hidden="true"
-                     alt={'blur'}/>
-                <img
+                <NextImage src={"/products/SL-68/sl-68.jpeg"}
+                           className="absolute t-0 l-0 b-0 r-0 z-0 inset-0 w-[95%] h-full object-cover filter blur-2xl scale-105 saturate-150 opacity-60  rounded-large"
+                           aria-hidden="true"
+                           alt={'blur'}
+                           width={1920}
+                           height={600}
+                           quality={30}
+                           priority={false}
+                />
+                <NextImage
                     className={'absolute t-0 l-o b-0 r-0 z-9 object-cover rounded-large h-[100%] w-[95%]  dark:brightness-[0.7] brightness-[0.7] '}
-                    src={'/products/SL-68/sl-68.jpg'}
-                    alt={'hero'}/>
+                    src={"/products/SL-68/sl-68.jpeg"}
+                    alt={'hero'}
+                    width={900}
+                    height={300}
+                    quality={50}
+                    priority={false}
+                />
 
             </section>
             {/*2. Каталог*/}
