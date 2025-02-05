@@ -15,7 +15,7 @@ export default function ProductsPage() {
             <div>
                 <h1 className={title()}>Каталог</h1>
             </div>
-            <h2 className={title({size: 'h3'})}>Портативные аккумуляторные электростанции</h2>
+            <h2 className={`${title({size: 'h3'})} text-center`}>Портативные аккумуляторные электростанции</h2>
             <div className="gap-4 grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 w-full">
                 {productsData.models.map((item, index) => (
                     <Card key={index} isPressable shadow="sm"
@@ -24,7 +24,7 @@ export default function ProductsPage() {
                             <Image
                                 as={NextImage}
                                 alt={item.name}
-                                className="w-auto object-cover h-[240px] sm:h-[160px] lg:h-[200px]"
+                                className="min-w-full object-cover h-[240px] sm:h-[160px] lg:h-[200px]"
                                 radius="lg"
                                 shadow="sm"
                                 src={item.image}
