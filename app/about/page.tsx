@@ -1,8 +1,5 @@
-'use client'
 import { title } from "@/components/primitives";
 import { Card, CardBody } from "@heroui/card";
-import { Image } from "@heroui/image";
-import NextImage from "next/image";
 
 export default function AboutPage() {
     return (
