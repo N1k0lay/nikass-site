@@ -9,6 +9,10 @@ export const siteConfig = {
             href: "/products",
         },
         {
+            label: "О нас",
+            href: "/about",
+        },
+        {
             label: "Контакты",
             href: "/contact",
         },
@@ -17,6 +21,10 @@ export const siteConfig = {
         {
             label: "Каталог",
             href: "/products",
+        },
+        {
+            label: "О нас",
+            href: "/about",
         },
         {
             label: "Контакты",
