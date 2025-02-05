@@ -30,8 +30,6 @@ export default function ProductsPage() {
                                 src={item.image}
                                 width="300"
                                 height="200"
-                                placeholder="blur"
-                                blurDataURL={item.image}
                             />
                         </CardBody>
                         <CardFooter className="text-small justify-between">
