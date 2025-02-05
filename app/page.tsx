@@ -28,6 +28,8 @@ export default function PricingPage() {
                            height={600}
                            quality={30}
                            priority={false}
+                           placeholder="blur"
+                           blurDataURL={`/products/SL-68/sl-68.jpeg`}
                 />
                 <NextImage
                     className={'absolute t-0 l-o b-0 r-0 z-9 object-cover rounded-large h-[100%] w-[95%]  dark:brightness-[0.7] brightness-[0.7] '}
@@ -36,7 +38,8 @@ export default function PricingPage() {
                     width={900}
                     height={300}
                     quality={50}
-                    priority={false}
+                    placeholder="blur"
+                    blurDataURL={`/products/SL-68/sl-68.jpeg`}
                 />
 
             </section>
@@ -70,6 +73,8 @@ export default function PricingPage() {
                                 src={'/products/SL-68/sl-68.jpg'}
                                 width={300}
                                 height={400}
+                                placeholder="blur"
+                                blurDataURL={`/products/SL-68/sl-68.jpg`}
                             />
                             <CardFooter
                                 className="absolute bg-white/30 bottom-0 border-t border-slate-300 z-10 justify-between">
@@ -115,6 +120,8 @@ export default function PricingPage() {
                                 src="/images/solar_battery.jpg"
                                 width={300}
                                 height={400}
+                                placeholder="blur"
+                                blurDataURL={`/images/solar_battery.jpg`}
                             />
                             <CardFooter
                                 className="absolute bg-white/30 bottom-0 border-t border-slate-300 z-10 justify-between">
@@ -159,6 +166,8 @@ export default function PricingPage() {
                                 src="/images/lifepo4_battery_2.jpg"
                                 width={300}
                                 height={400}
+                                placeholder="blur"
+                                blurDataURL={`/images/lifepo4_battery_2.jpg`}
                             />
                             <CardFooter
                                 className="absolute bg-white/30 bottom-0 border-t border-slate-300 z-10 justify-between">
