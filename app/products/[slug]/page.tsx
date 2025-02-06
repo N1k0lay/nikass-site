@@ -6,8 +6,12 @@ import Link from 'next/link';
 import Description from "@/app/products/[slug]/Description";
 import {ProductType} from "@/types/productType";
 import NextImage from "next/image";
+import type {Metadata} from 'next'
 
-export default async function ProductPage({params}: { params: Promise<{ slug: string }> }) {
+type Props = {
+    params: Promise<{ slug: string }>
+}
+export default async function ProductPage({params}: Props) {
     const slug = (await params).slug;
     const productData: ProductType | undefined = productsData.models.find(
         (item) => item.model.toLowerCase() === slug.toLowerCase()
@@ -48,4 +52,24 @@ export async function generateStaticParams() {
     return productsData.models.map((product) => ({
         slug: product.model.toLowerCase(),
     }));
+}
+
+export async function generateMetadata(
+    {params}: Props
+): Promise<Metadata> {
+    // read route params
+    const slug = (await params).slug
+
+    // fetch data
+    const productData: ProductType | undefined = productsData.models.find(
+        (item) => item.model.toLowerCase() === slug.toLowerCase()
+    );
+
+    if (productData) return {
+        title: productData.name,
+        description: productData.shortDescription,
+    }
+    return {
+        title: 'Товар NIKASS',
+    }
 }

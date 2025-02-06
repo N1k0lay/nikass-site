@@ -11,7 +11,7 @@ import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
+    default: `${siteConfig.name}`,
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -34,9 +34,6 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="ru-RU">
-      <head>
-        <title>NIKASS</title>
-      </head>
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
